@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors({
     origin: '*',
     methods: ["GET", "POST"],
-    credentials: true
+    credentials: false
 }));
 app.use(cookieParser());
 const port = process.env.AUTH_SERVICE_PORT || 3077;
