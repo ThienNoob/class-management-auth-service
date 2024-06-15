@@ -11,7 +11,7 @@ const salt = 10;
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: '*',
+    origin: 'process.env.BASE_URL_FE',
     methods: ["GET", "POST"],
     credentials: false
 }));
