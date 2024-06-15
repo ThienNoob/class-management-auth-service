@@ -11,9 +11,9 @@ const salt = 10;
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: 'process.env.BASE_URL_FE',
+    origin: process.env.BASE_URL_FE,
     methods: ["GET", "POST"],
-    credentials: false
+    credentials: true
 }));
 app.use(cookieParser());
 const port = process.env.AUTH_SERVICE_PORT || 3077;
